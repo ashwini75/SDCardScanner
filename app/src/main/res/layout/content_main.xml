@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="80dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/scan_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/start_scan_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/start_scan" />
+
+        <Button
+            android:id="@+id/stop_scan_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/stop_scan" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/avg_file_size_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/avg_file_size"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/large_file_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="@string/view_large_files" />
+
+        <Button
+            android:id="@+id/frequent_file_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="@string/view_frequent_files" />
+
+    </LinearLayout>
+
+</LinearLayout>
